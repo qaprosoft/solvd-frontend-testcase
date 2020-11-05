@@ -1,0 +1,1 @@
+console.log(`%c script is ready`, 'color: purple; font-weight: 900; font-size: 14px')
