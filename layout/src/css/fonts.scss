@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Leiko';
+  src: url('../assets/fonts/Leiko/Leiko-Regular.otf')
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: url('../assets/fonts/Tinos/Tinos-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'TinosItalic';
+  src: url('../assets/fonts/Tinos/Tinos-Italic.ttf')
+}
+
+@font-face {
+  font-family: 'TinosBold';
+  src: url('../assets/fonts/Tinos/Tinos-Bold.ttf')
+}
+
+@font-face {
+  font-family: 'TinosBoldItalic';
+  src: url('../assets/fonts/Tinos/Tinos-BoldItalic.ttf')
+}
+
+.font {
+  &-leiko {
+    font-family: 'Leiko';
+  }
+
+  &-tinos {
+    font-family: 'Tinos';
+
+    &-italic {
+      font-family: 'TinosItalic';
+    }
+
+    &-bold {
+      font-family: 'TinosBold';
+
+      &-italic {
+        font-family: 'TinosBoldItalic';
+      }
+    }
+  }
+}
