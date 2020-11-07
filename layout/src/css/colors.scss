@@ -1,0 +1,45 @@
+@use 'sass:map';
+
+// Colors by actual name (http://chir.ag/projects/name-that-color)
+
+$c-downriver: #112e66;
+$c-zircon: #f1f6ff;
+
+$c-white: #ffff;
+$c-silver: #cccccc;
+$c-silver-chalice: #aaaaaa;
+
+$c-selective-yellow: #ffb800;
+
+// Semantic/simple color names
+
+$c-primary-dark: $c-downriver;
+$c-primary-light: $c-white;
+
+$c-neutral: $c-zircon;
+
+$c-grey-dark: $c-silver-chalice;
+$c-grey-light: $c-silver;
+
+$c-orange: $c-selective-yellow;
+
+// Color selectors
+
+$colors-map: (
+  'primary-dark': $c-primary-dark,
+  'primary-light': $c-primary-light,
+  'neutral': $c-neutral,
+  'grey-dark': $c-grey-dark,
+  'grey-light': $c-grey-light,
+  'orange': $c-orange,
+);
+
+@each $postfix, $color in $colors-map {
+  .bg--#{$postfix} {
+    background-color: $color;
+  }
+
+  .color--#{$postfix} {
+    color: $color;
+  }
+}

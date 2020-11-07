@@ -1,17 +1,57 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/styles.scss")
-  body
-    section
-      h1 Typography
-      ul
-        li.font-leiko .font-leiko Should be Leiko (Leiko-Regular)
-        li.font-tinos .font-tinos Should be Tinos (Tinos-Regular)
-        li.font-tinos-bold .font-tinos-bold Should be Tinos-Bold
-        li.font-tinos-italic .font-tinos-italic Should be Tinos-Italic
-        li.font-tinos-bold-italic .font-tinos-bold-italic Should be Tinos-BoldItalic
+extends layout.pug
+block body
+  section(style="padding: 0px 20px 40px 20px;")
+    h1.font-heading-lg Colors
+    hr
+    p Look for color sass variables and selectors at "/css/colors"
 
-  footer
+    - var colors = ['primary-dark', 'primary-light', 'neutral', 'grey-dark', 'grey-light', 'orange']
+    section(style="display: flex").font-heading-xs
+      each bgColor in colors
+        div(style="padding: 8px")
+          div(style="font-family: sans-serif; line-height: normal")= `$c-${bgColor}`
+          div= `.bg--${bgColor}`
+          div(class=`bg--${bgColor}`, style="padding: 14px; margin-top: 8px;")
+            ul
+              each color in colors
+                li(class=`color--${color}`)= `.color--${color}`
+    br
+
+    h1.font-heading-lg Typography
+    hr
+
+    p Fonts connected at "/css/fonts.scss"
+    p There is won't be h1/h2/h3/... assignments control font size using mixins and selectors
+    ul(style="padding-left: 22px; padding-top: 12px;")
+      li.font-leiko .font-leiko Should be Leiko (Leiko-Regular)
+      li.font-tinos .font-tinos Should be Tinos (Tinos-Regular)
+      li.font-tinos-bold .font-tinos-bold Should be Tinos-Bold
+      li.font-tinos-italic .font-tinos-italic Should be Tinos-Italic
+      li.font-tinos-bold-italic .font-tinos-bold-italic Should be Tinos-BoldItalic
+    br
+
+    p Look for typography selectors/mixins at "/css/typography.scss"
+    br
+
+    h2.font-heading-md Heading style 'Leiko-Regular' font-family (.font-heading-*)
+
+    ul(style="padding-left: 22px; padding-top: 12px;")
+      - var fontHeadingSizes = ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']
+      each size in fontHeadingSizes
+        li(class=`font-heading-${size}`)= `.font-heading-${size}`
+    br
+
+    h2.font-heading-md Text style 'Tinos-Regular' font-family (.font-text-*)
+    ul(style="padding-left: 22px; padding-top: 12px;")
+      - var fontTextSizes = ['xs', 'sm', 'md', 'lg']
+      each size in fontTextSizes
+        li(class=`font-text-${size}`)= `.font-text-${size}`
+    br
+
+    h2.font-heading-lg Media breakpoints (responsive abilities)
+    hr
+    p Look for media breakpoints selectors/mixins at "/css/media-breakpoints.scss"
+    p
+      | We define "desktop" as 1440px min width screen "tablet" 
+      | as min 768px (IPad portrait orientation) and max 1339px, 
+      | all that below 768px screen width we consider as "mobile"

@@ -1,0 +1,65 @@
+@use "sass:map";
+@import './fonts';
+
+@mixin font-size($font-size, $line-height: normal) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// Bound common font-size with corresponding line-height
+
+$size-to-height: (
+  12: 16,
+  14: 20,
+  16: 22,
+  18: 24,
+  24: 32,
+  32: 42,
+  40: 50,
+  56: 66,
+);
+
+@mixin font($family: 'Leiko', $size: inherit, $line-height: inherit) {
+  font-family: $family, arial, sans-serif;
+
+  $actual-line-height: map.get($size-to-height, $size);
+
+  @if $actual-line-height {
+    font-size: $size + px;
+    line-height: $actual-line-height + px;
+  } @else {
+    font-size: $size;
+    line-height: $line-height;
+  }
+}
+
+// We have strict set of possible font sizes, try not to invent something exceptional
+
+$heading-map: (
+  'xxs': 14,
+  'xs': 16,
+  'sm': 18,
+  'md': 24,
+  'lg': 32,
+  'xl': 40,
+  'xxl': 56,
+);
+
+@each $postfix, $size in $heading-map {
+  .font-heading-#{$postfix} {
+    @include font('Leiko', $size);
+  }
+}
+
+$text-map: (
+  'xs': 12,
+  'sm': 14,
+  'md': 16,
+  'lg': 18,
+);
+
+@each $postfix, $size in $text-map {
+  .font-text-#{$postfix} {
+    @include font('Leiko', $size);
+  }
+}

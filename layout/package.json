@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "parcel watch src/**/*.pug",
     "dev": "browser-sync start -s ./dist -f ./dist/*",
-    "build": "parcel build src/**/*.pug --no-content-hash --no-source-maps --no-minify"
+    "build": "rm -rf ./dist | parcel build src/**/*.pug --no-content-hash --no-source-maps --no-minify"
   },
   "keywords": [],
   "author": "",

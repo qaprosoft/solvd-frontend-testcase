@@ -1,0 +1,35 @@
+// We define "desktop" as 1440px min width screen "tablet" as min 768px (IPad portrait orientation) and max 1339px
+// All that below 768px screen width we consider as "mobile"
+
+$desktop-min-width: 1440px;
+$tablet-max-width: $desktop-min-width - 1px;
+$tablet-min-width: 768px;
+$mobile-max-width: $tablet-min-width - 1px;
+
+@mixin media-mobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @include media-mobile {
+    display: inherit;
+  }
+}
+
+.tablet-down {
+  display: none;
+
+  @include media-tablet {
+    display: inherit;
+  }
+}

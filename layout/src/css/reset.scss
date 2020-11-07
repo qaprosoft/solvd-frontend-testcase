@@ -26,3 +26,17 @@ article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
     display:block;
 }
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+
+  &:focus, &:visited {
+    color: inherit;
+  }
+
+  text-decoration: inherit;  
+}
