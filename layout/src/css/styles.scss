@@ -2,3 +2,18 @@
 @import './media-breakpoints';
 @import './typography';
 @import './colors';
+
+// Layout style
+
+body {
+  margin: 0 auto;
+  width: 1440px; // should be replaced by max-width: 1440px; when we ready to work on responsive features
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// Components
+
+@import '../components/header/style'

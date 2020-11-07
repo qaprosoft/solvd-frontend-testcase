@@ -1,0 +1,44 @@
+.nav {
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &-link {
+    > span {
+      display: block;
+    }
+
+    @include font('Leiko', 18);
+
+    display: block;
+    display: flex;
+    align-items: center;;
+
+    color: $c-primary-dark;
+    height: 100%;
+    margin: 0 12px;
+
+    border-bottom: 5px transparent solid;
+    border-top: 5px transparent solid;
+
+    &:hover {
+      border-bottom-color: $c-primary-dark;
+    }
+
+    &.active {
+      border-bottom-color: $c-orange;
+    }
+
+    &:active {
+      color: lighten($c-primary-dark, 15%);
+    }
+  }
+
+  &-logo {
+    width: 140px;
+    height: 60px;
+    background-image: url('../assets/icons/icon.svg');
+    background-position: center;
+  }
+}

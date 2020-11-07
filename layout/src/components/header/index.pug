@@ -1,1 +1,14 @@
-h2 header placeholder
+mixin navLink(name, isActive = false)
+  a(href='#', class=`nav-link${isActive ? ' active' : ''}`)
+    span= name
+
+nav.nav
+  +navLink('Navigation 1')
+  +navLink('Navigation 2')
+  +navLink('Navigation 3')
+
+  a(href='http://localhost:3000/home.html').nav-link.nav-logo
+
+  +navLink('Navigation 4')
+  +navLink('Navigation 5')
+  +navLink('Navigation 6', true)

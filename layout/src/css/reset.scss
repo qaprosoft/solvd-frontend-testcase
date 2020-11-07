@@ -33,10 +33,5 @@ ul {
 
 a {
   color: inherit;
-
-  &:focus, &:visited {
-    color: inherit;
-  }
-
   text-decoration: inherit;  
 }
