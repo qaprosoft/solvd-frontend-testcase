@@ -85,3 +85,24 @@ block main
         div mod: ['light'] (background for contrast)
         div.bg--primary-dark(style="height: 35px")
           +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })
+      br
+
+    h3.font-heading-xxs elements/button/button
+    include elements/button/button
+
+    section
+      div.pd
+        p mod: ['dark']
+        +button({ name: 'Button Text', mod: ['dark'] })
+
+    h3.font-heading-xxs elements/tab-button/tab-button
+    include elements/tab-button/tab-button
+
+    section(style="display: flex")
+      div.pd
+        p mod: ['light'], isActive: false
+        +tabButton({ name: 'Button Text', mod: ['light'], isActive: false })
+
+      div.pd
+        p mod: ['light'], isActive: true 
+        +tabButton({ name: 'Button Text', mod: ['light'], isActive: true})

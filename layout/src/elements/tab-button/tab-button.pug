@@ -1,0 +1,3 @@
+mixin tabButton({ name, mod = ['light'], isActive = false })
+  button(class=`${cn('tab-button', mod)}${isActive ? ' active': ''}`, type='button')
+    span= name

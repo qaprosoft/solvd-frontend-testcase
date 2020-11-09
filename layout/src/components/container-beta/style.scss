@@ -1,0 +1,27 @@
+.container-beta {
+  color: $c-primary-dark;
+  height: 468px;
+
+  display: flex;
+  text-align: center;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    @include font('Leiko', 56);
+
+    max-width: 41%;
+    margin: 0.5em;
+  }
+
+  p {
+    @include font('Tinos', 18);
+    max-width: 36%;
+  }
+
+  div {
+    margin-top: 3%;
+  }
+}

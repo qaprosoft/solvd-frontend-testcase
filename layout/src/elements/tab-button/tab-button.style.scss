@@ -1,0 +1,39 @@
+.tab-button {
+  @include font('Leiko', 16);
+  
+  cursor: pointer;
+  width: 180px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    display: block;
+  }
+
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+
+  &--light {
+    color: $c-grey-light;
+    border-bottom-color: $c-grey-light;
+
+    &:hover {
+      color: $c-primary-dark;
+      background-color: $c-neutral;
+      border-bottom-color: $c-primary-dark;
+    }
+
+    &.active {
+      cursor: default;
+      color: $c-primary-dark;
+      border-bottom-color: $c-primary-dark;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

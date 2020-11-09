@@ -10,6 +10,10 @@ body {
   width: 1440px; // should be replaced by max-width: 1440px; when we ready to work on responsive features
 }
 
+footer {
+  padding-bottom: 600px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,8 +25,11 @@ body {
 // Common elements
 
 @import '../elements/arrow-link/arrow-link.style';
+@import '../elements/button/button.style';
+@import '../elements/tab-button/tab-button.style';
 
 // Components
 
 @import '../components/header/style';
-@import '../components/container-alpha/style'
+@import '../components/container-alpha/style';
+@import '../components/container-beta/style';

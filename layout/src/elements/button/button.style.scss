@@ -1,0 +1,20 @@
+.button {
+  @include font('Leiko', 16);
+  
+  cursor: pointer;
+  width: 180px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    display: block;
+  }
+
+  &--dark {
+    background-color: $c-primary-dark;
+    color: $c-primary-light;
+  }
+}
