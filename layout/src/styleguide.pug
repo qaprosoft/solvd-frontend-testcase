@@ -1,6 +1,6 @@
 extends layout.pug
 block main 
-  section(style="padding: 0px 20px 40px 20px;")
+  section(style="padding: 0px 20px 500px 20px;")
     h1.font-heading-lg Colors
     hr
     p Look for color sass variables and selectors at "/css/colors"
@@ -55,3 +55,33 @@ block main
       | We define "desktop" as 1440px min width screen "tablet" 
       | as min 768px (IPad portrait orientation) and max 1339px, 
       | all that below 768px screen width we consider as "mobile"
+    br
+
+    h2.font-heading-lg Common elements
+    hr
+    p Look for common elements at '/elements/*'
+    br
+    
+    h3.font-heading-xxs elements/arrow-link/arrow-link
+    include elements/arrow-link/arrow-link
+
+    section(style="display: flex")
+      div.pd
+        div mod: ['light'] (background for contrast)
+        div.bg--primary-dark
+          +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light'] })
+
+      div.pd
+        div mod: ['dark']
+          div
+            +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['dark'] })
+
+      div.pd
+        div mod: ['dark', 'underline']
+          div
+            +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['dark', 'underline'] })
+
+      div.pd
+        div mod: ['light'] (background for contrast)
+        div.bg--primary-dark(style="height: 35px")
+          +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })

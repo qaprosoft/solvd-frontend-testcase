@@ -13,7 +13,7 @@
 
     display: block;
     display: flex;
-    align-items: center;;
+    align-items: center;
 
     color: $c-primary-dark;
     height: 100%;
@@ -21,6 +21,9 @@
 
     border-bottom: 5px transparent solid;
     border-top: 5px transparent solid;
+
+    transition-property: border-bottom-color, color;
+    transition-duration: 250ms;
 
     &:hover {
       border-bottom-color: $c-primary-dark;
@@ -38,7 +41,6 @@
   &-logo {
     width: 140px;
     height: 60px;
-    background-image: url('../assets/icons/icon.svg');
     background-position: center;
   }
 }

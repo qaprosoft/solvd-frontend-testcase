@@ -1,0 +1,59 @@
+.arrow-link {
+  cursor: pointer;
+  font-family: 'Leiko';
+
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+
+  > span {
+    display: block;
+
+    &:nth-child(2) {
+      margin-left: 0.2em;
+      width: 0.7em;
+      height: 0.7em;
+    }
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--light {
+    color: $c-primary-light;
+
+    svg path {
+      fill: $c-primary-light;
+    }
+  }
+
+  &--dark {
+    color: $c-primary-dark;
+
+    svg path {
+      fill: $c-primary-dark;
+    }
+  }
+
+  &__underline {
+    display: none;
+    position: absolute;
+    bottom: -0.4em;
+    width: 100%;
+    height: 1px;
+  }
+
+  &--underline &__underline {
+    display: block;
+  }
+
+  &--dark &__underline {
+    background-color: $c-primary-dark;
+  }
+
+  &--light &__underline {
+    background-color: $c-primary-light;
+  }
+}

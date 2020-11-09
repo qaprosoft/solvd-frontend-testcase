@@ -1,0 +1,27 @@
+- var bgImagePath = `/assets/images/mainstage-image.png`
+
+mixin tabBtn(n, name, isActive = false)
+  button(class=`container_alpha__tab-btn ${isActive ? ' active' : ''}`)
+    span= n
+    span= name
+
+section.container_alpha
+  div(style=`background-image: url('${bgImagePath}');`).container_alpha__bg-image
+  div.container_alpha__overlay
+  
+  div.container_alpha__content
+    div.container_alpha__info
+      h2 Here we have a two line display intro.
+      p 
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+        | nisi ut aliquip ex ea commodo consequat.
+      
+      include ../../elements/arrow-link/arrow-link
+      +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })
+
+    div.container_alpha__tab-buttons
+      +tabBtn('1.', 'Innovation Partner', true)
+      +tabBtn('2.', 'Top Class Team')
+      +tabBtn('3.', 'Corporate Solutions')

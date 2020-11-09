@@ -1,0 +1,7 @@
+mixin arrowLink({ name, href, mod = ['dark'] })
+  a(href=href, class=cn('arrow-link', mod))
+    span= name
+    span
+      include ../../assets/icons/right-arrow.svg
+
+    div.arrow-link__underline

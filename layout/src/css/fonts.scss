@@ -1,26 +1,30 @@
+// @TODO: Leiko is not supporting font-weight property
+
 @font-face {
   font-family: 'Leiko';
-  src: url('../assets/fonts/Leiko/Leiko-Regular.otf')
+  src: url('../assets/fonts/Leiko/Leiko-Regular.otf') format('opentype');
 }
+
+// @TODO: Tinos is not supporting font-weight property
 
 @font-face {
   font-family: 'Tinos';
-  src: url('../assets/fonts/Tinos/Tinos-Regular.ttf')
+  src: url('../assets/fonts/Tinos/Tinos-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'TinosItalic';
-  src: url('../assets/fonts/Tinos/Tinos-Italic.ttf')
+  src: url('../assets/fonts/Tinos/Tinos-Italic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'TinosBold';
-  src: url('../assets/fonts/Tinos/Tinos-Bold.ttf')
+  src: url('../assets/fonts/Tinos/Tinos-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'TinosBoldItalic';
-  src: url('../assets/fonts/Tinos/Tinos-BoldItalic.ttf')
+  src: url('../assets/fonts/Tinos/Tinos-BoldItalic.ttf') format('truetype');
 }
 
 .font {
