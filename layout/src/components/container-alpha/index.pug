@@ -1,3 +1,4 @@
+include ../../elements/arrow-link/arrow-link
 - var bgImagePath = `/assets/images/mainstage-image.png`
 
 mixin tabBtn(n, name, isActive = false)
@@ -18,8 +19,8 @@ section.container_alpha
         | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
         | nisi ut aliquip ex ea commodo consequat.
       
-      include ../../elements/arrow-link/arrow-link
-      +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })
+      div.font-heading-sm
+        +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })
 
     div.container_alpha__tab-buttons
       +tabBtn('1.', 'Innovation Partner', true)
