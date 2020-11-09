@@ -1,0 +1,44 @@
+.container-gamma {
+  // background-color: $c-neutral;
+  // height: 560px;
+  
+  &__tab-controls {
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+
+    > button + button {
+      margin-left: 30px;
+    }
+  }
+
+  &__items {
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item + &__item {
+    margin-left: 41px;
+  }
+
+  &__item {
+    width: 373px;
+    color: $c-primary-dark;
+  }
+
+  &__title {
+    @include font('Leiko', 24);
+    margin-top: 30px;
+  }
+
+  &__description {
+    @include font('Tinos', 16);
+    margin-top: 23px;
+  }
+
+  &__arrow-link {
+    @include font('Leiko', 16);
+    margin-top: 32px;
+  }
+}
