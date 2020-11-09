@@ -1,0 +1,16 @@
+include ../../elements/arrow-link/arrow-link
+
+section.container-delta
+  img.container-delta__img(src="/assets/images/content-image.png")
+  div.container-delta__content
+    h2.container-delta__title
+      | Here we have a two line display.
+
+    p.container-delta__description
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+      | nisi ut aliquip ex ea commodo consequat.
+
+    div.container-delta__arrow-link
+      +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light']})
