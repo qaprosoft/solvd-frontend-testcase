@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
 
+  @include media-mobile {
+    padding: 40px 0px;
+  }
+
   &__inner {
     max-width: 600px;
     display: flex;
@@ -11,15 +15,28 @@
     align-items: center;
 
     text-align: center;
+
+    @include media-mobile {
+      max-width: 400px;
+      padding: 0 20px;
+    }
   }
 
   &__title {
     @include font('Leiko', 56);
+
+    @include media-mobile {
+      @include font('Leiko', 32);
+    }
   }
 
   &__description {
     @include font('Leiko', 40);
-    margin-top: 40px;
+    margin-top: 30px;
+
+    @include media-mobile {
+      @include font('Leiko', 24);
+    }
   }
 
   &__button {
