@@ -1,21 +1,35 @@
+$img-ratio: 5/12;
+$max-width: 1200px;
+
 .container-map {
   &__map {
     position: relative;
     margin: 0 auto;
-    max-width: 1200px;
+    width: $max-width;
+    height: ($max-width * $img-ratio);
 
-    img {
+    @media (max-width: $max-width) {
       width: 100%;
+      height: calc(100vw * #{$img-ratio});
     }
   }
 
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+  }
+
   &__location-pin {
-    position: absolute; 
-    left: 0; 
+    position: absolute;
+    left: 0;
     right: 0;
-    top: 33%;
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 90px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 75px;
+    height: 90px;
   }
 }
