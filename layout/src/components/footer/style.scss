@@ -1,0 +1,77 @@
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  color: $c-primary-dark;
+
+  &__up {
+    padding: 50px 0px;
+    border-top: 1px solid $c-primary-dark;
+
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    flex-grow: 1;
+
+    &-item {
+      width: 26%;
+    }
+
+    &-item + &-item {
+      margin-left: 1.5em;
+    }
+  }
+
+  &__title {
+    @include font('Leiko', 18);
+  }
+
+  &__content {
+    @include font('Leiko', 14);
+    margin-top: 22px;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__link + &__link {
+    margin-top: 0.7em;
+  }
+
+  &__social {
+    display: flex;
+
+    &-link + &-link {
+      margin-left: 28px;
+    }
+
+    &-link {
+      width: 24px;
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+
+  &__down {
+    @include font('Tinos', 12);
+
+    padding: 2em 0;
+    border-top: 1px solid $c-primary-dark;
+    display: flex;
+
+    > div {
+      &:nth-child(1) {
+        flex-grow: 1;
+      }
+    }
+
+    &-link + &-link {
+      margin-left: 2em;
+    }
+  }
+}

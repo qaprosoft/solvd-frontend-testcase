@@ -10,10 +10,6 @@ body {
   width: 1440px; // should be replaced by max-width: 1440px; when we ready to work on responsive features
 }
 
-footer {
-  padding-bottom: 600px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -37,3 +33,4 @@ footer {
 @import '../components/container-delta/style';
 @import '../components/container-epsilon/style';
 @import '../components/container-map/style';
+@import '../components/footer/style';

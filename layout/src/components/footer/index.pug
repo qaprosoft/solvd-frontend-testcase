@@ -1,0 +1,53 @@
+section.footer
+  section.footer__up
+    div.footer__menu
+      div.footer__menu-item
+        h4.footer__title Contact Us
+        div.footer__content
+          p 
+            | Floor 5, 
+            br
+            | 12-14 Grey Street, 
+            br
+            | Newcastle upon Tyne, 
+            br
+            | NE1 6TE 
+            br
+            br
+            | Tel: 0111 212 8111 
+            br
+            | admin@horizonthemes.co.uk
+
+      div.footer__menu-item
+        h4.footer__title Services
+        div.footer__content
+          - var links = ['Service one', 'Specialist Service Two', 'Specialist Three', 'Specialist Service Four', 'Service Five']
+          each link in links
+            a(href="#").footer__link= link
+
+      div.footer__menu-item
+        h4.footer__title Resources
+        div.footer__content
+          - var links = ['Resource One', 'Resource Link Two', 'Resource Three']
+          each link in links
+            a(href="#").footer__link= link
+
+    div.footer__social
+      a(href="#").footer__social-link
+        include ../../assets/icons/instagram.svg
+      a(href="#").footer__social-link
+        include ../../assets/icons/twitter.svg
+      a(href="#").footer__social-link
+        include ../../assets/icons/linkedin.svg
+      a(href="#").footer__social-link
+        include ../../assets/icons/facebook.svg
+
+  section.footer__down
+    div
+      span.footer__down-link © Horizon
+      span.footer__down-link Company No. 199899939
+      span.footer__down-link VAT No. 199899939
+    div
+      a(href="#").footer__down-link Cookies Policy
+      a(href="#").footer__down-link Privacy Policy
+      a(href="#").footer__down-link Terms #{'&'} Conditions
