@@ -1,19 +1,44 @@
+$max-width: 1200px;
+
 .footer {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 0 auto;
   padding-top: 40px;
   color: $c-primary-dark;
+
+  @media (max-width: $max-width + 80px) {
+    max-width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+  }
+
+  @include media-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+  }
 
   &__up {
     padding: 50px 0px;
     border-top: 1px solid $c-primary-dark;
 
     display: flex;
+    
+    @include media-tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    @include media-mobile {
+      padding: 45px 0;
+    }
   }
 
   &__menu {
     display: flex;
     flex-grow: 1;
+
 
     &-item {
       width: 26%;
@@ -21,6 +46,24 @@
 
     &-item + &-item {
       margin-left: 1.5em;
+    }
+
+    @include media-tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+
+      &-item {
+        width: auto;
+      }
+
+      &-item + &-item {
+        margin-left: 0;
+      }
+
+      &-item {
+        margin-top: 60px;
+      }
     }
   }
 
@@ -72,6 +115,35 @@
 
     &-link + &-link {
       margin-left: 2em;
+    }
+
+    @include media-tablet {
+      justify-content: space-between;
+
+      > div {
+        &:nth-child(1) {
+          flex-grow: 0;
+        }
+
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+  
+      &-link + &-link {
+        margin-left: 0;
+        margin-top: 3em;
+      }
+
+      &-link {
+        display: block;
+      }
+    }
+
+    @include media-mobile {
+      &-link + &-link {
+        margin-top: 2em;
+      }
     }
   }
 }
