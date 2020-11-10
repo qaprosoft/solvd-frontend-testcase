@@ -1,20 +1,43 @@
 include ../../elements/tab-button/tab-button
 include ../../elements/arrow-link/arrow-link
 
+- 
+  var images = [
+    '/assets/images/container-image-1.png', 
+    '/assets/images/container-image-2.png', 
+    '/assets/images/container-image-3.png',
+    '/assets/images/container-image-1.png',
+    '/assets/images/container-image-2.png',
+    '/assets/images/container-image-3.png',
+  ]
+
 mixin listItem({ imgSrc })
   div.container-gamma__item
-    img(src=imgSrc).container-gamma__img
-    h3.container-gamma__title
-      | This is a wide container title stretching two lines.
-    p.container-gamma__description
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      | sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing.
+    div.container-gamma__item-inner
+      img(src=imgSrc).container-gamma__img
+      h3.container-gamma__title
+        | This is a wide container title stretching two lines.
+      p.container-gamma__description
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        | sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing.
 
-    div.container-gamma__arrow-link.font-heading-xs
-      +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['dark']})
+      div.container-gamma__arrow-link.font-heading-xs
+        +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['dark']})
 
 section.container-gamma
-  div.container-gamma__items
-    +listItem({ imgSrc: '/assets/images/container-image-1.png' })
-    +listItem({ imgSrc: '/assets/images/container-image-2.png' })
-    +listItem({ imgSrc: '/assets/images/container-image-3.png' })
+  button.container-gamma__chevron.container-gamma__chevron--left#sliderLeftBtn 
+    include ../../assets/icons/chevron-left.svg
+  button.container-gamma__chevron.container-gamma__chevron--right#sliderRightBtn
+    include ../../assets/icons/chevron-right.svg
+
+  div.container-gamma__items#containerGammaItems
+    each img in images
+      +listItem({ imgSrc: img })
+
+  div.container-gamma__dots
+    each _ in images
+      div.container-gamma__dot
+        include ../../assets/icons/dot.svg
+
+script
+  include ./slider.js
