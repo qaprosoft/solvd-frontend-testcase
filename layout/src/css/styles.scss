@@ -18,6 +18,11 @@ body {
   padding: 8px;
 }
 
+// Layout variables
+
+$top-menu-height-desktop: 140px;
+$top-menu-height-tablet: 100px;
+
 // Common elements
 
 @import '../elements/arrow-link/arrow-link.style';

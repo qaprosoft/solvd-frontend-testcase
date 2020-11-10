@@ -8,7 +8,7 @@
       display: flex;
     }
 
-    height: 140px;
+    height: $top-menu-height-desktop;
     justify-content: space-around;
   }
 
@@ -19,7 +19,7 @@
       display: flex;
     }
 
-    height: 100px;
+    height: $top-menu-height-tablet;
     justify-content: space-between;
     padding: 0 40px;
 

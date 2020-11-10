@@ -6,11 +6,9 @@ mixin tabBtn(n, name, isActive = false)
     span= n
     span= name
 
-section.container_alpha
-  div(style=`background-image: url('${bgImagePath}');`).container_alpha__bg-image
+section.container_alpha(style=`background-image: url('${bgImagePath}');`)
   div.container_alpha__overlay
-  
-  div.container_alpha__content
+  div.container_alpha__inner
     div.container_alpha__info
       h2 Here we have a two line display intro.
       p 
@@ -19,7 +17,7 @@ section.container_alpha
         | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
         | nisi ut aliquip ex ea commodo consequat.
       
-      div.font-heading-sm
+      div
         +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })
 
     div.container_alpha__tab-buttons
