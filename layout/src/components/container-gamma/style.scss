@@ -1,16 +1,6 @@
 .container-gamma {
   padding-bottom: 40px;
 
-  &__tab-controls {
-    padding: 40px 0px;
-    display: flex;
-    justify-content: center;
-
-    > button + button {
-      margin-left: 30px;
-    }
-  }
-
   &__items {
     padding: 40px 0px;
     display: flex;

@@ -14,11 +14,6 @@ mixin listItem({ imgSrc })
       +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['dark']})
 
 section.container-gamma
-  div.container-gamma__tab-controls
-    +tabButton({ name: 'Active Tab', mod: ['light'], isActive: true })
-    +tabButton({ name: 'Inactive Tab', mod: ['light'] })
-    +tabButton({ name: 'Inactive Tab', mod: ['light'] })
-
   div.container-gamma__items
     +listItem({ imgSrc: '/assets/images/container-image-1.png' })
     +listItem({ imgSrc: '/assets/images/container-image-2.png' })
