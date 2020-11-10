@@ -4,13 +4,28 @@ mixin navLink(name, isActive = false)
   a(href='#', class=`nav-link${isActive ? ' active' : ''}`)
     span= name
 
-nav.nav
-  +navLink('Navigation 1')
-  +navLink('Navigation 2')
-  +navLink('Navigation 3')
+- var links = ['Navigation 1', 'Navigation 2', 'Navigation 3', 'Navigation 4', 'Navigation 5', 'Navigation 6']
+- var splitLinks = x => { const l = x.length; ch = Math.round(l / 2); return [x.slice(0, ch), x.slice(ch, l)]}
+- var [linksHead, linksTail] = splitLinks(links)
+
+nav.nav.nav-desktop
+  each linkName of linksHead
+    +navLink(linkName)
 
   a(href='#', style=`background-image: url('${logoImgPath}')`).nav-link.nav-logo
 
-  +navLink('Navigation 4')
-  +navLink('Navigation 5')
-  +navLink('Navigation 6', true)
+  each linkName of linksTail 
+    +navLink(linkName)
+
+nav.nav.nav-tablet
+  - var phoneNumber = '1-234-567-8910'
+  a(href=`tel:${phoneNumber}`).nav__phone
+    include ../../assets/icons/phone-icon.svg
+
+  a(href='#', style=`background-image: url('${logoImgPath}')`).nav-link.nav-logo
+
+  button.nav__hamburger-tablet
+    include ../../assets/icons/hamburger-tablet.svg
+
+  button.nav__hamburger-mobile
+    include ../../assets/icons/hamburger-mobile.svg

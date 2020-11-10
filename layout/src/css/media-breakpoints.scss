@@ -18,18 +18,8 @@ $mobile-max-width: $tablet-min-width - 1px;
   }
 }
 
-.mobile-only {
-  display: none;
-
-  @include media-mobile {
-    display: inherit;
-  }
-}
-
-.tablet-down {
-  display: none;
-
-  @include media-tablet {
-    display: inherit;
+@mixin media-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
   }
 }

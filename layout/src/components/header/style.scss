@@ -1,8 +1,33 @@
 .nav {
-  height: 140px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+
+  &-desktop {
+    display: none;
+    @include media-desktop {
+      display: flex;
+    }
+
+    height: 140px;
+    justify-content: space-around;
+  }
+
+  &-tablet {
+    display: none;
+
+    @include media-tablet {
+      display: flex;
+    }
+
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 40px;
+
+    @include media-mobile {
+      position: relative;
+      justify-content: center;
+    }
+  }
 
   &-link {
     > span {
@@ -42,5 +67,39 @@
     width: 140px;
     height: 60px;
     background-position: center;
+  }
+
+  &__phone {
+    @include media-mobile {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  }
+
+  &__hamburger {
+    &-tablet {
+      display: none;
+
+      @include media-tablet {
+        display: block;
+      }
+
+      @include media-mobile {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @include media-mobile {
+        display: block;
+      }
+
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
   }
 }
