@@ -1,18 +1,38 @@
 include ../../elements/tab-button/tab-button
 include ../../elements/button/button
 
-section.container-beta
-  div.container-beta__info
-    h2 Here we have a two line display intro.
-    p 
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      | nisi ut aliquip ex ea commodo consequat.
-    div
-      +button({ name: 'Button Text', mod: ['dark'] })
+-
+  var title = 'Here we have a two line display intro.'
+  var description = `
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat.
+  `
+  var buttonName = 'Button Text'
 
-  div.container-beta__tab-controls
-    +tabButton({ name: 'Active Tab', mod: ['light'], isActive: true })
-    +tabButton({ name: 'Inactive Tab', mod: ['light'] })
-    +tabButton({ name: 'Inactive Tab', mod: ['light'] })
+  var tabs = [
+    { name: 'Tab One', title, description, buttonName },
+    { name: 'Tab Two', title: title + ' 2', description, buttonName }, 
+    { name: 'Tab Three', title: title + ' 3', description, buttonName }
+  ]
+
+section.container-beta
+  div.container-beta__tabs
+    each tab in tabs
+      - var active = `${tabs.indexOf(tab) === 0}`
+
+      div(data-active=active).container-beta__tab
+        h2= tab.title 
+        p= tab.description
+        div
+          +button({ name: tab.buttonName, mod: ['dark'] })
+
+  div.container-beta__tab-buttons
+    each tab in tabs
+      - var active = `${tabs.indexOf(tab) === 0}`
+
+      +tabButton({ name: tab.name, mod: ['light'], active, extraClass: 'container-beta__tab-btn' })
+
+//- tabsFactory written at /js/index.js
+script tabsFactory({ tabItemSelector: '.container-beta__tab', tabButtonSelector: '.container-beta__tab-btn' })

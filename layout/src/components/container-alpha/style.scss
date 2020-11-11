@@ -16,7 +16,7 @@
     background-color: transparentize($c-primary-dark, 0.18);
   }
 
-  &__inner {
+  &__wrap {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -32,8 +32,18 @@
     }
   }
 
-  &__info {
+  &__tabs-wrap {
+    flex-grow: 1;
     display: flex;
+  }
+
+  &__tab {
+    display: none;
+    
+    &[data-active=true] {
+      display: flex;
+    }
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -111,7 +121,8 @@
       border-bottom-color: $c-primary-dark;
     }
 
-    &.active {
+    &[data-active=true] {
+      cursor: default;
       color: $c-primary-light;
       border-bottom-color: $c-orange;
 
@@ -126,7 +137,7 @@
       margin: 0px 0px 40px 0px;
 
       & + & {
-        margin-left: 23px;
+        margin-left: 15px;
       }
 
       > span:nth-child(1) {

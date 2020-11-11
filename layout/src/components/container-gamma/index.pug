@@ -2,13 +2,13 @@ include ../../elements/tab-button/tab-button
 include ../../elements/arrow-link/arrow-link
 
 - 
-  var images = [
-    '/assets/images/container-image-1.png', 
-    '/assets/images/container-image-2.png', 
-    '/assets/images/container-image-3.png',
-    '/assets/images/container-image-1.png',
-    '/assets/images/container-image-2.png',
-    '/assets/images/container-image-3.png',
+  var items = [
+    { img: '/assets/images/container-image-1.png' }, 
+    { img: '/assets/images/container-image-2.png' }, 
+    { img: '/assets/images/container-image-3.png' },
+    { img: '/assets/images/container-image-1.png' },
+    { img: '/assets/images/container-image-2.png' },
+    { img: '/assets/images/container-image-3.png' },
   ]
 
 mixin listItem({ imgSrc })
@@ -31,12 +31,14 @@ section.container-gamma
     include ../../assets/icons/chevron-right.svg
 
   div.container-gamma__items#containerGammaItems
-    each img in images
-      +listItem({ imgSrc: img })
+    each item in items
+      +listItem({ imgSrc: item.img })
 
   div.container-gamma__dots
-    each _ in images
-      div.container-gamma__dot
+    each x in items
+      - var isActive = `${items.indexOf(x) === 0}`
+
+      div.container-gamma__dot(data-active=isActive)
         include ../../assets/icons/dot.svg
 
 script

@@ -181,7 +181,7 @@
 
   &__contact-links {
     @include font('Leiko', 18);
-    padding: 20px;
+    padding: 20px 10px 20px 10px;
 
     > a {
       display: block;
@@ -194,6 +194,6 @@
 
   &__location-info {
     @include font('Tinos', 18);
-    padding: 20px 20px 0 20px;
+    padding: 10px 10px 0 10px;
   }
 }

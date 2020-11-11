@@ -1,14 +1,15 @@
 extends layout.pug
 
-block main 
-  section(style="padding: 24px")
-    h1.font-heading-xxl Solvd test case project
-    br
+block header
+  include components/header/index
 
-    mixin link(path, description)
-      li
-        a(href=`http://localhost:3000${path}`)= description
+block main
+  include components/container-alpha/index
+  include components/container-beta/index
+  include components/container-gamma/index
+  include components/container-delta/index
+  include components/container-epsilon/index
+  include components/container-map/index
 
-    ul(style="text-decoration: underline").font-heading-lg.color--primary-dark
-      +link('/styleguide.html', 'Project style guide')
-      +link('/home.html', 'Home page layout')
+block footer
+  include components/footer/index

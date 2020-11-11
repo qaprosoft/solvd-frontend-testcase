@@ -58,8 +58,6 @@ function animate({ timing, draw, duration }) {
   const makeDotActive = idx => ref.dots[idx].setAttribute('data-active', 'true')
   const makeDotInactive = idx => ref.dots[idx].setAttribute('data-active', 'false')
 
-  makeDotActive(0)
-
   ref.btnLeft.addEventListener('click', () => slide('left'))
   ref.btnRight.addEventListener('click', () => slide('right'))
 
@@ -111,7 +109,15 @@ function animate({ timing, draw, duration }) {
     });
   }
 
+  let lastWidth = window.innerWidth
+
   const resetScrollPosition = debounce(() => {
+    if (lastWidth === window.innerWidth) {
+      return
+    }
+
+    lastWidth = window.innerWidth
+
     ref.container.scrollLeft = 0
     ref.dots.forEach((_, idx) => makeDotInactive(idx))
 

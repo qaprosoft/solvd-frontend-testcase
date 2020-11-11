@@ -26,7 +26,7 @@
       border-bottom-color: $c-primary-dark;
     }
 
-    &.active {
+    &[data-active=true] {
       cursor: default;
       color: $c-primary-dark;
       border-bottom-color: $c-primary-dark;

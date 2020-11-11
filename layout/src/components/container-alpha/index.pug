@@ -1,26 +1,45 @@
 include ../../elements/arrow-link/arrow-link
-- var bgImagePath = `/assets/images/mainstage-image.png`
+-
+  var bgImagePath = `/assets/images/mainstage-image.png`
 
-mixin tabBtn(n, name, isActive = false)
-  button(class=`container_alpha__tab-btn ${isActive ? ' active' : ''}`)
-    span= n
-    span= name
+  var title = 'Here we have a two line display intro.'
+  var description = `
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat.
+  `
+  var link = { name: 'Link & Arrow', url: '#' }
+
+  var tabs = [
+    { name: 'Innovation Partner', title, description, link },
+    { name: 'Top Class Team', title: title + ' 2', description, link },
+    { name: 'Corporate Solutions', title: title + ' 3', description, link }
+  ]
 
 section.container_alpha(style=`background-image: url('${bgImagePath}');`)
   div.container_alpha__overlay
-  div.container_alpha__inner
-    div.container_alpha__info
-      h2 Here we have a two line display intro.
-      p 
-        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-        | nisi ut aliquip ex ea commodo consequat.
-      
-      div
-        +arrowLink({ name: 'Link & Arrow', href: '#', mod: ['light', 'underline'] })
+  div.container_alpha__wrap
+
+    div.container_alpha__tabs-wrap
+      each tab in tabs
+        - var isActive = `${tabs.indexOf(tab) === 0}`
+
+        div(data-active=isActive).container_alpha__tab
+          h2= tab.title
+          p= tab.description
+          
+          div
+            +arrowLink({ name: tab.link.name, href: tab.link.url, mod: ['light', 'underline'] })
 
     div.container_alpha__tab-buttons
-      +tabBtn('1.', 'Innovation Partner', true)
-      +tabBtn('2.', 'Top Class Team')
-      +tabBtn('3.', 'Corporate Solutions')
+      each tab in tabs
+        - var isActive = `${tabs.indexOf(tab) === 0}`
+        - var n = tabs.indexOf(tab) + 1 + '.'
+
+        button(class=`container_alpha__tab-btn`, data-active=isActive)
+          span= n
+          span= tab.name
+
+//- tabsFactory written at /js/index.js
+script tabsFactory({ tabItemSelector: '.container_alpha__tab', tabButtonSelector: '.container_alpha__tab-btn' })

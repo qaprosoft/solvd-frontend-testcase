@@ -100,9 +100,9 @@ block main
 
     section(style="display: flex")
       div.pd
-        p mod: ['light'], isActive: false
-        +tabButton({ name: 'Button Text', mod: ['light'], isActive: false })
+        p mod: ['light'], active: 'false'
+        +tabButton({ name: 'Button Text', mod: ['light'], active: false })
 
       div.pd
-        p mod: ['light'], isActive: true 
-        +tabButton({ name: 'Button Text', mod: ['light'], isActive: true})
+        p mod: ['light'], active: 'true'
+        +tabButton({ name: 'Button Text', mod: ['light'], active: true})
