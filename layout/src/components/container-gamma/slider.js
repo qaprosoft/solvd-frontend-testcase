@@ -42,6 +42,15 @@ function animate({ timing, draw, duration }) {
     container: document.getElementById('containerGammaItems'),
   }
 
+  for (let refKey in ref) {
+    const val = ref[refKey]
+
+    if (!val) {
+      console.error(`Can't find reference for: ${refKey}`)
+      return
+    }
+  }
+
   if (ref.items.length === 0) {
     return
   }

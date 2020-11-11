@@ -13,10 +13,18 @@ section.footer
             br
             | NE1 6TE 
             br
+
+            - var phoneNumber = '01234 212 8128'
+            - var email = 'admin@horizonthemes.co.uk'
+
             br
-            | Tel: 0111 212 8111 
+            a(href=`tel:${phoneNumber}`)
+              span Tel: 
+              span= phoneNumber
             br
-            | admin@horizonthemes.co.uk
+            a(href=`mailto:${email}`)
+              span Email: 
+              span= email
 
       div.footer__menu-item
         h4.footer__title Services

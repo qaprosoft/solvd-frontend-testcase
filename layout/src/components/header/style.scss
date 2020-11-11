@@ -1,3 +1,13 @@
+.top-gutter {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    width: 100%;
+    height: $top-menu-height-tablet;
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -19,12 +29,19 @@
       display: flex;
     }
 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+
     height: $top-menu-height-tablet;
     justify-content: space-between;
     padding: 0 40px;
 
     @include media-mobile {
-      position: relative;
       justify-content: center;
     }
   }
@@ -101,5 +118,82 @@
       top: 20px;
       right: 20px;
     }
+  }
+}
+
+.mobile-menu {
+  display: none;
+
+  @include media-tablet {
+    &[data-visible=true] {
+      display: block;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    z-index: 99;
+    top: $top-menu-height-tablet;
+    background-color: #000;
+    opacity: 0.4;
+
+    width: 100%;
+    height: calc(100vh - #{$top-menu-height-tablet});
+  }
+
+  &__bar {
+    position: fixed;
+    width: 414px;
+    top: $top-menu-height-tablet;
+    right: 0;
+    z-index: 100;
+    height: calc(100vh - #{$top-menu-height-tablet});
+
+    background-color: $c-primary-dark;
+    color: $c-primary-light;
+    padding: 0 20px 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    @include media-mobile {
+      width: 100vw;
+    }
+  }
+
+  &__links {
+    flex-grow: 1;
+    padding-top: 20px;
+
+    > a {
+      @include font('Leiko', 18);
+      display: block;
+      padding: 20px 10px 20px 10px;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+    }
+
+    > a + a {
+      border-top-color: $c-primary-light;
+    }
+  }
+
+  &__contact-links {
+    @include font('Leiko', 18);
+    padding: 20px;
+
+    > a {
+      display: block;
+
+      > span:nth-child(1) {
+        color: $c-orange;
+      }
+    }
+  }
+
+  &__location-info {
+    @include font('Tinos', 18);
+    padding: 20px 20px 0 20px;
   }
 }

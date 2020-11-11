@@ -31,5 +31,10 @@ $max-width: 1200px;
 
     width: 75px;
     height: 90px;
+
+    svg {
+      position: relative;
+      top: -30px;
+    }
   }
 }

@@ -8,6 +8,8 @@ mixin navLink(name, isActive = false)
 - var splitLinks = x => { const l = x.length; ch = Math.round(l / 2); return [x.slice(0, ch), x.slice(ch, l)]}
 - var [linksHead, linksTail] = splitLinks(links)
 
+div.top-gutter
+
 nav.nav.nav-desktop
   each linkName of linksHead
     +navLink(linkName)
@@ -17,15 +19,49 @@ nav.nav.nav-desktop
   each linkName of linksTail 
     +navLink(linkName)
 
-nav.nav.nav-tablet
+div.nav.nav-tablet
   - var phoneNumber = '1-234-567-8910'
   a(href=`tel:${phoneNumber}`).nav__phone
     include ../../assets/icons/phone-icon.svg
 
   a(href='#', style=`background-image: url('${logoImgPath}')`).nav-link.nav-logo
 
-  button.nav__hamburger-tablet
+  button.nav__hamburger-tablet#tabletHamburger
     include ../../assets/icons/hamburger-tablet.svg
 
-  button.nav__hamburger-mobile
+  button.nav__hamburger-mobile#mobileHamburger
     include ../../assets/icons/hamburger-mobile.svg
+
+div.mobile-menu#mobileMenu
+  div.mobile-menu__overlay#mobileMenuOverlay
+  div.mobile-menu__bar
+    nav.mobile-menu__links
+      each link in links
+        a(href="#").mobile-menu__link= link
+
+    div
+      div.mobile-menu__contact-links
+        - var phoneNumber = '01234 212 8128'
+        - var email = 'admin@horizonthemes.co.uk'
+
+        a(href=`tel:${phoneNumber}`)
+          span Tel: 
+          span= phoneNumber
+
+        a(href=`mailto:${email}`)
+          span Email: 
+          span= email
+
+      div.mobile-menu__location-info
+        p
+          | Floor 5, 
+          br
+          | 12-14 Grey Street, 
+          br
+          | Newcastle upon Tyne, 
+          br
+          | NE1 6TE
+          br
+
+script
+  include ./mobile-menu.js
