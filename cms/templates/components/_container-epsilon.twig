@@ -1,0 +1,18 @@
+{% import '_elements' as elements %}
+
+{% set mocks = {
+  imgUrl: 'img/content-image.png',
+  title: 'A message followed by a way to get in touch',
+  description: '+ 44 (0) 1234 567 890',
+  link: { name: 'Button text', url: '#' },
+} %}
+
+<section class="container-epsilon">
+  <div class="container-epsilon__inner">
+    <h2 class="container-epsilon__title">{{ mocks.title }}</h2>
+    <p class="container-epsilon__description">{{ mocks.description }}</h2>
+    <div class="container-epsilon__button">
+      <a href="{{ mocks.link.url }}">{{ elements.button(mocks.link.name, 'dark') }}</a>
+    </div>
+  </div>
+</section>

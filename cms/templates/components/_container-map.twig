@@ -1,0 +1,10 @@
+{% set mapImgUrl = 'img/container-map.png' %}
+
+<div class="container-map">
+  <div class="container-map__map">
+    <div class="container-map__img" style="background-image: url('{{ mapImgUrl }}')"></div>
+    <div class="container-map__location-pin">
+      {% include 'svg/_location-pin' %}
+    </div>
+  </div>
+</div>

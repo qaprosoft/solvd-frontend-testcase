@@ -1,0 +1,22 @@
+{% import '_elements' as elements %}
+
+{% set mocks = {
+  imgUrl: 'img/content-image.png',
+  title: 'Here we have a two line display.',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat.',
+  link: { name: 'Link & Arrow', url: '#' },
+} %}
+
+<section class="container-delta">
+  <img class="container-delta__img" src="{{ mocks.imgUrl }}"/>
+  <div class="container-delta__content">
+    <h2 class="container-delta__title">{{ mocks.title }}</h2>
+    <p class="container-delta__description">{{ mocks.description }}</h2>
+    <div class="container-delta__arrow-link">
+      {{ elements.arrowLink({ underline: false, url: mocks.link.url, name: mocks.link.name }, 'light') }}
+    </div>
+  </div>
+</section>
