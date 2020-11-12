@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Leiko';
+  src: url('./fonts/Leiko/Leiko-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: url('./fonts/Tinos/Tinos-Regular.ttf') format('truetype');
+}

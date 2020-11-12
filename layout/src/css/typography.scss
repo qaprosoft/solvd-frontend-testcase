@@ -1,5 +1,26 @@
 @use "sass:map";
-@import './fonts';
+
+.font {
+  &-leiko {
+    font-family: 'Leiko';
+  }
+
+  &-tinos {
+    font-family: 'Tinos';
+
+    &-italic {
+      font-family: 'TinosItalic';
+    }
+
+    &-bold {
+      font-family: 'TinosBold';
+
+      &-italic {
+        font-family: 'TinosBoldItalic';
+      }
+    }
+  }
+}
 
 @mixin font-size($font-size, $line-height: normal) {
   font-size: $font-size;
