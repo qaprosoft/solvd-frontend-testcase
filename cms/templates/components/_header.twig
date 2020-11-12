@@ -1,0 +1,110 @@
+{# Desktop header #}
+
+{% set logoImgSrc = '' %}
+
+{% set navLinks = [
+  { name: 'Navigation 1', url: '#' },
+  { name: 'Navigation 2', url: '#' },
+  { name: 'Navigation 3', url: '#' },
+  { name: 'Navigation 4', url: '#' },
+  { name: 'Navigation 5', url: '#' },
+  { name: 'Navigation 6', url: '#' },
+] %}
+
+{% set phoneNumber = '01234 212 8128' %}
+{% set email = 'admin@horizonthemes.co.uk' %}
+
+{% set hiddenNavBarBottomInfo = [
+  'Floor 5',
+  '12-14 Grey Street',
+  'Newcastle upon Tyne',
+  'NE1 6TE',
+] %}
+
+<nav class="nav nav-desktop">
+  {% for link in navLinks|slice(0, 3) %}
+    <a class="nav-link" href="{{ link.url }}"><span>{{ link.name }}</span></a>
+  {% endfor %}
+
+  <a class="nav-link nav-logo" href="/" style="background-image: url('{{ logoImgSrc }}')"></a>
+
+  {% for link in navLinks|slice(3, 7) %}
+    <a class="nav-link" href="{{ link.url }}"><span>{{ link.name }}</span></a>
+  {% endfor %}
+</nav>
+
+{# Tablet/Mobile header #}
+
+<div class="top-gutter"></div>
+<div class="nav nav-tablet">
+  <a class="nav__phone" href="tel:1-234-567-8910">
+    {% include 'svg/_phone-icon' %}
+  </a>
+
+  <a class="nav-link nav-logo" href="/" style="background-image: url('{{ logoImgSrc }}')"></a>
+
+  <button class="nav__hamburger-tablet" id="tabletHamburger">
+    {% include 'svg/_hamburger-tablet' %}
+  </button>
+  <button class="nav__hamburger-mobile" id="mobileHamburger">
+    {% include 'svg/_hamburger-mobile' %}
+  </button>
+</div>
+
+{# Hidden mobile menu #}
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-menu__bar">
+    <nav class="mobile-menu__links">
+      {% for link in navLinks %}
+        <a class="mobile-menu__link" href="{{ link.url }}">{{ link.name }}</a>
+      {% endfor %}
+    </nav>
+    <div>
+      <div class="mobile-menu__contact-links">
+        <a href="tel:{{ phoneNumber }}"><span>Tel: </span><span>{{ phoneNumber }}</span></a>
+        <a href="mailto:{{ email }}"><span>Email: </span><span>{{ email }}</span></a>
+      </div>
+      <div class="mobile-menu__location-info">
+        <p>
+          {% for item in hiddenNavBarBottomInfo %}
+            {{item}}, <br>
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Hidden menu behaviour script #}
+
+<script>;
+  (function () {
+    var ref = {
+      tabletHamburger: document.getElementById('tabletHamburger'),
+      mobileHamburger: document.getElementById('mobileHamburger'),
+      overlay: document.getElementById('mobileMenuOverlay'),
+      menu: document.getElementById('mobileMenu')
+    };
+
+    for (var refKey in ref) {
+      var val = ref[refKey];
+
+      if (!val) {
+        console.error("Can't find reference for: ".concat(refKey));
+        return;
+      }
+    }
+
+    function toggleMenuVisibility() {
+      var currentActiveState = ref.menu.dataset.visible;
+      var updatedState = currentActiveState === 'true' ? 'false' : 'true';
+      ref.menu.setAttribute('data-visible', updatedState);
+    }
+
+    ref.tabletHamburger.addEventListener('click', toggleMenuVisibility);
+    ref.mobileHamburger.addEventListener('click', toggleMenuVisibility);
+    ref.overlay.addEventListener('click', toggleMenuVisibility);
+  })();
+</script>
