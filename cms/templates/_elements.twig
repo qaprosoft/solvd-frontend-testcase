@@ -1,0 +1,25 @@
+{% macro arrowLink(props) %}
+  <a class="arrow-link arrow-link--light{{ props.underline ? ' arrow-link--underline' : ''}}" href="{{ props.url }}">
+    <span>{{ props.name }}</span>
+    <span>
+      <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.741687 1.05L5.31669 6L0.666687 10.95L1.79169 12L7.49169 6L1.86669 -5.24537e-08L0.741687 1.05Z" fill="#112E66"></path>
+      </svg>
+    </span>
+    <div class="arrow-link__underline"></div>
+  </a>
+{% endmacro %}
+
+
+{# possible modifiers: 'light' | 'dark  #}
+{% macro button(name, modifier = 'light', type = 'button') %}
+  <button type="{{ type }}" class="button button--{{ modifier }}">
+    <span>{{ name }}</span>
+  </button>
+{% endmacro %}
+
+{% macro tabButton(name, active, extraClass = '') %}
+  <button class="tab-button tab-button--light {{ extraClass }}" type="button" data-active="{{ active }}">
+    <span>{{ name }}</span>
+  </button>
+{% endmacro %}

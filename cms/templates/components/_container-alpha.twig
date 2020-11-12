@@ -1,0 +1,55 @@
+{% import '_elements' as elements %}
+
+{% set bgImageUrl = '/img/mainstage-image.png' %}
+{% set mocks = {
+  title: 'Here we have a two line display intro.',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat.',
+  link: {
+    name: 'Link & Arrow',
+    url: '#',
+  }
+} %}
+
+{% set tabs = [
+  { name: 'Innovation Partner', title: mocks.title, description: mocks.description, link: { name: mocks.link.name, url: mocks.link.url } },
+  { name: 'Top Class Team', title: mocks.title ~ ' 2', description: mocks.description, link: { name: mocks.link.name, url: mocks.link.url } },
+  { name: 'Corporate Solutions', title: mocks.title ~ ' 3', description: mocks.description, link: { name: mocks.link.name, url: mocks.link.url } },
+] %}
+
+<section class="container_alpha" style="background-image: url('{{ bgImageUrl }}');">
+  <div class="container_alpha__overlay"></div>
+  <div class="container_alpha__wrap">
+    <div class="container_alpha__tabs-wrap">
+      {% for tab in tabs %}
+        {% set active = loop.index == 1 ? 'true' : 'false' %}
+
+        <div class="container_alpha__tab" data-active="{{ active }}">
+          <h2>{{ tab.title }}</h2>
+          <p>{{ tab.description }}</p>
+          <div>
+            {{ elements.arrowLink({ name: tab.link.name, url: tab.link.url, underline: true }) }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="container_alpha__tab-buttons">
+      {% for tab in tabs %}
+        {% set active = loop.index == 1 ? 'true' : 'false' %}
+        <button class="container_alpha__tab-btn" data-active="{{ active }}">
+          <span>{{ loop.index }}.</span><span>Innovation Partner</span>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  tabsFactory({
+    tabItemSelector: '.container_alpha__tab',
+    tabButtonSelector: '.container_alpha__tab-btn'
+  })
+</script>
