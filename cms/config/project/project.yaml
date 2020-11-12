@@ -1,4 +1,4 @@
-dateModified: 1605160171
+dateModified: 1605184286
 email:
   fromEmail: kmazur@solvd.com
   fromName: unix
@@ -6,7 +6,8 @@ email:
 system:
   edition: solo
   live: true
-  name: unix
+  name: 'Solvd test case'
+  retryDuration: null
   schemaVersion: 3.5.13
   timeZone: America/Los_Angeles
 users:

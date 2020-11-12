@@ -1,15 +1,7 @@
-{# Desktop header #}
+{% set data = craft.entries.section('header').one() %}
 
-{% set logoImgSrc = '/img/logo.svg' %}
-
-{% set navLinks = [
-  { name: 'Navigation 1', url: '#' },
-  { name: 'Navigation 2', url: '#' },
-  { name: 'Navigation 3', url: '#' },
-  { name: 'Navigation 4', url: '#' },
-  { name: 'Navigation 5', url: '#' },
-  { name: 'Navigation 6', url: '#' },
-] %}
+{% set logoImgSrc = '/images/' ~ data.logoImage[0].filename %}
+{% set navLinks = data.navigationLinks|map((x) => { name: x.linkName, url: x.linkUrl})  %}
 
 {% set phoneNumber = '01234 212 8128' %}
 {% set email = 'admin@horizonthemes.co.uk' %}
@@ -21,15 +13,19 @@
   'NE1 6TE',
 ] %}
 
+{# Desktop header #}
+
 <nav class="nav nav-desktop">
   {% for link in navLinks|slice(0, 3) %}
-    <a class="nav-link" href="{{ link.url }}"><span>{{ link.name }}</span></a>
+    {% set activeClass = link.url == craft.app.request.baseUrl ? ' active' : '' %}
+    <a class="nav-link{{activeClass}}" href="{{ link.url }}"><span>{{ link.name }}</span></a>
   {% endfor %}
 
   <a class="nav-link nav-logo" href="/" style="background-image: url('{{ logoImgSrc }}')"></a>
 
   {% for link in navLinks|slice(3, 7) %}
-    <a class="nav-link" href="{{ link.url }}"><span>{{ link.name }}</span></a>
+    {% set activeClass = link.url == craft.app.request.baseUrl ? ' active' : '' %}
+    <a class="nav-link{{activeClass}}" href="{{ link.url }}"><span>{{ link.name }}</span></a>
   {% endfor %}
 </nav>
 

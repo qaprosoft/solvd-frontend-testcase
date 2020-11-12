@@ -1,0 +1,38 @@
+fieldLayouts:
+  500e7cca-5f29-4380-ad28-41106f993046:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: images
+hasUrls: false
+name: Images
+settings:
+  path: images
+sortOrder: 1
+type: craft\volumes\Local
+url: ''
