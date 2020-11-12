@@ -1,5 +1,6 @@
-{% macro arrowLink(props) %}
-  <a class="arrow-link arrow-link--light{{ props.underline ? ' arrow-link--underline' : ''}}" href="{{ props.url }}">
+{# possible modifiers: 'light' | 'dark' #}
+{% macro arrowLink(props, modifier = 'light') %}
+  <a class="arrow-link arrow-link--{{ modifier }}{{ props.underline ? ' arrow-link--underline' : ''}}" href="{{ props.url }}">
     <span>{{ props.name }}</span>
     <span>
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
