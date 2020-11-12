@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    image: 'flipbox/php:72-apache'
+    ports:
+      - '80:80'
+      - '443:443'
+
+    volumes:
+      - '.:/var/www/html/'
+    environment:
+      ENVIRONMENT: dev
+      DB_SERVER: db
+      DB_USER: craft
+      DB_PASSWORD: craft
+      DB_DATABASE: craft
+      XDEBUG_ON: 'yes'
+      XDEBUG_HOST: 'host.docker.internal'
+      XDEBUG_IDEKEY: 'PHPSTORM'
+      APACHE_DOCUMENT_ROOT: '/var/www/html/web'
+  db:
+    image: 'mysql:5.7'
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: craft
+      MYSQL_USER: craft
+      MYSQL_PASSWORD: craft
