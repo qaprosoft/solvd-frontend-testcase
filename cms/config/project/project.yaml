@@ -1,8 +1,29 @@
-dateModified: 1605253922
+dateModified: 1605255269
 email:
   fromEmail: kmazur@solvd.com
   fromName: unix
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  simplemap:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.4.2
+    settings:
+      apiKey: null
+      browserApiKey: null
+      disablePopulateMissingFieldData: false
+      geoLocationAutoRedirect: false
+      geoLocationCacheDuration: 5270400
+      geoLocationService: none
+      geoLocationToken: ''
+      geoService: nominatim
+      geoToken: ''
+      mapTiles: carto.dark_all
+      mapToken: ''
+      serverApiKey: null
+      unrestrictedApiKey: null
+      w3wEnabled: ''
+      w3wToken: ''
 system:
   edition: solo
   live: true

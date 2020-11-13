@@ -89,6 +89,19 @@ fieldLayouts:
             width: 100
         name: 'Container Epsilon'
         sortOrder: 5
+      -
+        elements:
+          -
+            fieldUid: 6a0f9954-7bd8-42a7-8efa-ccd6a87e6409
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Container Map'
+        sortOrder: 6
 handle: homePage
 hasTitleField: false
 name: 'Home page'

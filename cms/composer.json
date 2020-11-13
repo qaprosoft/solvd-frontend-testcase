@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "^3.5.10",
+    "ether/simplemap": "3.8.5",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {

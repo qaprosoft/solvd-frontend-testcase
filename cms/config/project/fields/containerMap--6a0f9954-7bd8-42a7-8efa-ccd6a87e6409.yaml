@@ -1,0 +1,33 @@
+contentColumnType: text
+fieldGroup: 0ac481cb-23cc-4aff-a8d6-6ecf2a734663
+handle: containerMap
+instructions: 'Last block on the home page'
+name: 'Container Map'
+searchable: false
+settings:
+  boundary: '""'
+  boundaryRestrictionNELat: null
+  boundaryRestrictionNELng: null
+  boundaryRestrictionSWLat: null
+  boundaryRestrictionSWLng: null
+  country: null
+  countryRestriction: null
+  height: null
+  hideAddress: ''
+  hideLatLng: null
+  hideMap: ''
+  hideSearch: ''
+  lat: 51.272154
+  lng: 0.514951
+  maxZoom: '18'
+  minZoom: '3'
+  showCurrentLocation: ''
+  showLatLng: ''
+  showW3WField: false
+  showW3WGrid: false
+  size: normal
+  typeRestriction: null
+  zoom: 15
+translationKeyFormat: null
+translationMethod: none
+type: ether\simplemap\fields\MapField
