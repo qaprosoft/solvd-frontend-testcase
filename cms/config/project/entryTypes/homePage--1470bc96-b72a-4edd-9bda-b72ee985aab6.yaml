@@ -76,6 +76,19 @@ fieldLayouts:
             width: 100
         name: 'Container Delta'
         sortOrder: 4
+      -
+        elements:
+          -
+            fieldUid: 613dab12-cd8f-424c-8eb8-49f1f03c0a07
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Container Epsilon'
+        sortOrder: 5
 handle: homePage
 hasTitleField: false
 name: 'Home page'
