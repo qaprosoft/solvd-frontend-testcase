@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0ac481cb-23cc-4aff-a8d6-6ecf2a734663
+handle: containerGammaFields
+instructions: 'Third block at the home page. On the desktop we display only 3 items, for tablet/mobile we using slider, so limit is higher - 10 items'
+name: 'Container Gamma Fields'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_containergammafields}}'
+  maxBlocks: '10'
+  minBlocks: '2'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

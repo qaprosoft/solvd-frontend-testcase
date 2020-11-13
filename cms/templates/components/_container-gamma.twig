@@ -1,21 +1,21 @@
 {% import '_elements' as elements %}
 {% import _self as self %}
 
-{% set mocks = {
-  title: 'This is a wide container title stretching two lines.',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing.',
-  link: { name: 'Link & Arrow', url: '#' } 
-} %}
+{% set data = craft.entries.section('homePage').one() %}
 
-{% set items = [
-  { imgSrc: 'img/container-image-1.png', title: mocks.title, description: mocks.description, link: mocks.link }, 
-  { imgSrc: 'img/container-image-2.png', title: mocks.title, description: mocks.description, link: mocks.link }, 
-  { imgSrc: 'img/container-image-3.png', title: mocks.title, description: mocks.description, link: mocks.link }, 
-  { imgSrc: 'img/container-image-1.png', title: mocks.title, description: mocks.description, link: mocks.link }, 
-  { imgSrc: 'img/container-image-2.png', title: mocks.title, description: mocks.description, link: mocks.link }, 
-  { imgSrc: 'img/container-image-3.png', title: mocks.title, description: mocks.description, link: mocks.link }, 
-] %}
+{% 
+  set items = data.containerGammaFields.all()|map(
+    x => {
+      imgSrc: '/images/' ~ x.itemImage.one().filename,
+      title: x.itemTitle,
+      description: x.itemDescription,
+      link: {
+        name: x.itemLinkName,
+        url: x.itemLinkUrl,
+      }
+    }
+  )
+%}
 
 {% macro listItem(props) %}
   <div class="container-gamma__item">
@@ -23,7 +23,7 @@
       <img class="container-gamma__img" src="{{ props.imgSrc }}">
 
       <h3 class="container-gamma__title">{{ props.title }}</h3>
-      <p class="container-gamma__description">{{ props.description }}</p>
+      <p class="container-gamma__description">{{ props.description|raw }}</p>
 
       <div class="container-gamma__arrow-link">
         {{ elements.arrowLink({ name: props.link.name, url: props.link.url, underline: false }, 'dark') }}

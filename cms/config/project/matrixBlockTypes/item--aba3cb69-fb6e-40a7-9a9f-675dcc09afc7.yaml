@@ -1,0 +1,159 @@
+field: ef49d1ce-6764-4df9-9de8-6d48b03bc3e6
+fieldLayouts:
+  3acf7fa5-0efe-446f-9980-ea22ddf505b1:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 42141022-0342-4301-92cf-df2537401d92
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: eafaed36-e031-472b-8f97-21bff082977f
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba4cfea4-482b-4ef6-a1fb-0d89832f5dfd
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 27c5a9f5-1bb2-4932-bcce-7658d8140658
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 0f38b30b-0d85-49c2-b7ae-7c83ea9bff9e
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  0f38b30b-0d85-49c2-b7ae-7c83ea9bff9e:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: itemLinkUrl
+    instructions: ''
+    name: 'Item Link Url'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  27c5a9f5-1bb2-4932-bcce-7658d8140658:
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemLinkName
+    instructions: ''
+    name: 'Item Link Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  42141022-0342-4301-92cf-df2537401d92:
+    contentColumnType: string
+    fieldGroup: null
+    handle: itemImage
+    instructions: ''
+    name: 'Item Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:1e05b705-ae00-4185-a653-5b8fc267712a'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:1e05b705-ae00-4185-a653-5b8fc267712a'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  ba4cfea4-482b-4ef6-a1fb-0d89832f5dfd:
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemDescription
+    instructions: ''
+    name: 'Item Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  eafaed36-e031-472b-8f97-21bff082977f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemTitle
+    instructions: ''
+    name: 'Item Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: item
+name: item
+sortOrder: 1

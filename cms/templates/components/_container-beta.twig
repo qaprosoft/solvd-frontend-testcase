@@ -22,7 +22,7 @@
       {% set active = loop.index == 1 ? 'true' : 'false' %}
       <div class="container-beta__tab" data-active="{{ active }}">
         <h2>{{ tab.title }}</h2>
-        <p>{{ tab.description }}</p>
+        <p>{{ tab.description|raw }}</p>
         <div>{{ elements.button(tab.link.name, 'dark')}}</div>
       </div>
     {% endfor %}
