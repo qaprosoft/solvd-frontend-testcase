@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0ac481cb-23cc-4aff-a8d6-6ecf2a734663
+handle: containerBetaFields
+instructions: 'Second block at the home page, max 3 tabs allowed'
+name: 'Container Beta Fields'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_containerbetafields}}'
+  maxBlocks: '3'
+  minBlocks: '1'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

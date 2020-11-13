@@ -5,7 +5,8 @@
 
 {% 
   set tabs = data.containerAlphaFields.all()|map(
-    x => { 
+    x => {
+      name: x.tabName,
       title: x.tabTitle,
       description: x.tabDescription,
       link: {
@@ -25,7 +26,7 @@
 
         <div class="container_alpha__tab" data-active="{{ active }}">
           <h2>{{ tab.title }}</h2>
-          <p>{{ tab.description }}</p>
+          <p>{{ tab.description|raw }}</p>
           <div>
             {{ elements.arrowLink({ name: tab.link.name, url: tab.link.url, underline: true }) }}
           </div>
@@ -37,7 +38,7 @@
       {% for tab in tabs %}
         {% set active = loop.index == 1 ? 'true' : 'false' %}
         <button class="container_alpha__tab-btn" data-active="{{ active }}">
-          <span>{{ loop.index }}.</span><span>Innovation Partner</span>
+          <span>{{ loop.index }}.</span><span>{{ tab.name }}</span>
         </button>
       {% endfor %}
     </div>
