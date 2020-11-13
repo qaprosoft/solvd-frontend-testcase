@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0ac481cb-23cc-4aff-a8d6-6ecf2a734663
+handle: containerDeltaFields
+instructions: 'Fourth block at the home page'
+name: 'Container Delta Fields'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_containerdeltafields}}'
+  maxBlocks: '1'
+  minBlocks: '1'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

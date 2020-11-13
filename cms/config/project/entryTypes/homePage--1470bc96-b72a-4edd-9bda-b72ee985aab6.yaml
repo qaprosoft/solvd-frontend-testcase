@@ -63,6 +63,19 @@ fieldLayouts:
             width: 100
         name: 'Container Gamma'
         sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 40c74096-a435-4760-9211-4bd31266156d
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Container Delta'
+        sortOrder: 4
 handle: homePage
 hasTitleField: false
 name: 'Home page'
