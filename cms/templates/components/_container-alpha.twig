@@ -1,23 +1,20 @@
 {% import '_elements' as elements %}
 
 {% set bgImageUrl = '/img/mainstage-image.png' %}
-{% set mocks = {
-  title: 'Here we have a two line display intro.',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat.',
-  link: {
-    name: 'Link & Arrow',
-    url: '#',
-  }
-} %}
+{% set data = craft.entries.section('homePage').one() %}
 
-{% set tabs = [
-  { name: 'Innovation Partner', title: mocks.title, description: mocks.description, link: { name: mocks.link.name, url: mocks.link.url } },
-  { name: 'Top Class Team', title: mocks.title ~ ' 2', description: mocks.description, link: { name: mocks.link.name, url: mocks.link.url } },
-  { name: 'Corporate Solutions', title: mocks.title ~ ' 3', description: mocks.description, link: { name: mocks.link.name, url: mocks.link.url } },
-] %}
+{% 
+  set tabs = data.containerAlphaFields.all()|map(
+    x => { 
+      title: x.tabTitle,
+      description: x.tabDescription,
+      link: {
+        name: x.tabLinkName,
+        url: x.tabLinkUrl,
+      }
+    }
+  )
+%}
 
 <section class="container_alpha" style="background-image: url('{{ bgImageUrl }}');">
   <div class="container_alpha__overlay"></div>

@@ -1,0 +1,146 @@
+field: 8dfa05ac-5704-4025-b5b5-d08eb32af006
+fieldLayouts:
+  0ee2540b-46d2-41a8-91b6-ba21d416df63:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 958f2571-5546-4343-9dfe-44aa4bf59b92
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 948c1c47-7a66-4c73-b9ba-456cf622fa96
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: cdf49784-3c75-48b4-901a-c3bdf9a70810
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e8018cb2-9742-4449-96fe-15eb9f53cdcc
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 320aa0ad-a578-41a2-9724-6dbfb4b07b09
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  320aa0ad-a578-41a2-9724-6dbfb4b07b09:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: tabLinkUrl
+    instructions: 'Url for tab link'
+    name: 'Tab Link Url'
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  948c1c47-7a66-4c73-b9ba-456cf622fa96:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tabTitle
+    instructions: 'The big title'
+    name: 'Tab Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  958f2571-5546-4343-9dfe-44aa4bf59b92:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tabName
+    instructions: 'Displayed at tab button'
+    name: 'Tab Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cdf49784-3c75-48b4-901a-c3bdf9a70810:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tabDescription
+    instructions: 'Displayed under big title'
+    name: 'Tab Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e8018cb2-9742-4449-96fe-15eb9f53cdcc:
+    contentColumnType: text
+    fieldGroup: null
+    handle: tabLinkName
+    instructions: 'Link under description'
+    name: 'Tab Link Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: tab
+name: tab
+sortOrder: 1

@@ -26,13 +26,22 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-        name: Content
+          -
+            fieldUid: 8dfa05ac-5704-4025-b5b5-d08eb32af006
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Container Alpha'
         sortOrder: 1
 handle: homePage
-hasTitleField: true
+hasTitleField: false
 name: 'Home page'
 section: 9b806f50-8544-4873-a181-e9ba626ac9d2
 sortOrder: 1
-titleFormat: null
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
