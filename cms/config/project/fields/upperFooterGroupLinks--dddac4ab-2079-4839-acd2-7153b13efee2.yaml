@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 09ced2aa-68de-47be-b6b3-26839ab289a9
+handle: upperFooterGroupLinks
+instructions: 'Links will be grouped by "Group name" and displayed at the bottom of the page at upper footer'
+name: 'Upper Footer Group Links'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_upperfootergrouplinks}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

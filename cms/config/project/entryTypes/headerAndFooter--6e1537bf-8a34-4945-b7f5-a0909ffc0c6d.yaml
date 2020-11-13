@@ -1,0 +1,149 @@
+fieldLayouts:
+  8c46b903-db14-4c38-a472-4ebff2ed60ce:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 50
+          -
+            fieldUid: a0f9dc79-eb15-40a6-88a1-92fb769c0b52
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 3b552df2-49a9-4f8a-8ee5-49e26e41fe79
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 9f15ecee-9c1b-4b33-ac6b-932d84c29a55
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b698e2c0-731b-49d6-bd16-5af803cfd848
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Header navigation links'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 1841809d-daa7-43fd-9f66-d582968ece4a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 04e5e21d-5576-42fd-a97d-b1f2d95eb4dc
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 49425f11-caf7-49bb-af02-a7f0b592ba5b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 7ebac8d5-d49a-43c3-a072-29a8739ddd99
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: dddac4ab-2079-4839-acd2-7153b13efee2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Upper footer'
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 0e43699e-dca7-437f-b798-e102260b5dde
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: cba68f5f-0081-46e1-a42a-3b29b466f2e7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 75
+        name: 'Lower footer'
+        sortOrder: 4
+handle: headerAndFooter
+hasTitleField: false
+name: 'Header and Footer'
+section: 919157ba-69f3-42b3-abc8-b55d8650b553
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

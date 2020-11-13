@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 09ced2aa-68de-47be-b6b3-26839ab289a9
+handle: contacts
+instructions: 'Add phone number and email'
+name: Contacts
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_contacts}}'
+  maxBlocks: '1'
+  minBlocks: '1'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

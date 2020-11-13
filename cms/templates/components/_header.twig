@@ -1,17 +1,14 @@
-{% set data = craft.entries.section('header').one() %}
+{% set data = craft.entries.section('headerAndFooter').one() %}
 
-{% set logoImgSrc = '/images/' ~ data.logoImage[0].filename %}
-{% set navLinks = data.navigationLinks|map((x) => { name: x.linkName, url: x.linkUrl})  %}
+{% set logoImgSrc = '/images/' ~ data.logoImage.one().filename %}
 
-{% set phoneNumber = '01234 212 8128' %}
-{% set email = 'admin@horizonthemes.co.uk' %}
+{# navLinks :: Array<{ name: string; url: string }> #}
+{% set navLinks = data.navigationLinks.all()|map((x) => { name: x.linkName, url: x.linkUrl})  %}
 
-{% set hiddenNavBarBottomInfo = [
-  'Floor 5',
-  '12-14 Grey Street',
-  'Newcastle upon Tyne',
-  'NE1 6TE',
-] %}
+{% set phoneNumber = data.contacts.one().phoneNumber %}
+{% set email = data.contacts.one().email %}
+
+{% set hiddenNavBarBottomInfo = data.extraContactsInfo|nl2br %}
 
 {# Desktop header #}
 
@@ -33,7 +30,7 @@
 
 <div class="top-gutter"></div>
 <div class="nav nav-tablet">
-  <a class="nav__phone" href="tel:1-234-567-8910">
+  <a class="nav__phone" href="tel:{{ phoneNumber }}">
     {% include 'svg/_phone-icon' %}
   </a>
 
@@ -63,11 +60,7 @@
         <a href="mailto:{{ email }}"><span>Email: </span><span>{{ email }}</span></a>
       </div>
       <div class="mobile-menu__location-info">
-        <p>
-          {% for item in hiddenNavBarBottomInfo %}
-            {{item}}, <br>
-          {% endfor %}
-        </p>
+        <p>{{ hiddenNavBarBottomInfo|raw }}</p>
       </div>
     </div>
   </div>

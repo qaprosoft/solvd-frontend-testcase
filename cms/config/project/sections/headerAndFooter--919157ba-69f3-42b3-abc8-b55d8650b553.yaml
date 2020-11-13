@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: headerAndFooter
+name: 'Header and Footer'
+propagationMethod: all
+siteSettings:
+  43df29a9-3736-4351-bb5b-ccbede7c03cc:
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: header-and-footer
+type: single

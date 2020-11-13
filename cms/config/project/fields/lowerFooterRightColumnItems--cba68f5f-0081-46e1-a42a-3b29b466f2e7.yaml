@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 09ced2aa-68de-47be-b6b3-26839ab289a9
+handle: lowerFooterRightColumnItems
+instructions: 'Each link item will be displayed at the bottom-right corner of the page'
+name: 'Lower Footer Right Column Items'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_lowerfooterrightcolumnitems}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

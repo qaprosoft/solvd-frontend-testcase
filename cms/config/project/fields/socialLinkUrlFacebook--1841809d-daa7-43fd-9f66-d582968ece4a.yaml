@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 09ced2aa-68de-47be-b6b3-26839ab289a9
+handle: socialLinkUrlFacebook
+instructions: ''
+name: 'Social Link Url Facebook'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

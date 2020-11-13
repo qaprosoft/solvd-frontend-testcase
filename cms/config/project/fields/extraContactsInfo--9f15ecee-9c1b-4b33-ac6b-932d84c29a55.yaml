@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 09ced2aa-68de-47be-b6b3-26839ab289a9
+handle: extraContactsInfo
+instructions: 'The content will appear at the bottom of hidden mobile menu and at the left-bottom corner of the upper footer'
+name: 'Extra Contacts Info'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

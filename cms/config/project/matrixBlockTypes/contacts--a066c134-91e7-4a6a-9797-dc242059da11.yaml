@@ -1,0 +1,68 @@
+field: 3b552df2-49a9-4f8a-8ee5-49e26e41fe79
+fieldLayouts:
+  4f6f955a-3b14-42c9-9068-548e38684eb0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2241cd3c-fad2-4e31-934b-1a17dd94e29a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 5ef9f196-83ef-4a46-8d99-704e580db0c7
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  2241cd3c-fad2-4e31-934b-1a17dd94e29a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: phoneNumber
+    instructions: ''
+    name: 'Phone number'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5ef9f196-83ef-4a46-8d99-704e580db0c7:
+    contentColumnType: text
+    fieldGroup: null
+    handle: email
+    instructions: ''
+    name: Email
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: contacts
+name: contacts
+sortOrder: 1
